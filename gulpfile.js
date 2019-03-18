@@ -7,7 +7,7 @@ async function startInstall(cb) {
 
   const gulpFileStream = await downloadTask();
   const savedFile = await saveFile(gulpFileStream);
-  fileUnzip(savedFile);
+  unzipFile(savedFile);
 
   cb();
 }
@@ -30,10 +30,10 @@ async function saveFile(gulpFileStream) {
   });
 }
 
-function fileUnzip(zipFile) {
+function unzipFile(zipFile) {
   return fs.createReadStream(zipFile).pipe(unzip.Extract({ path: './tmp' }));
 }
 
 
 
-exports.default = startInstall
+exports.installExtension = startInstall
