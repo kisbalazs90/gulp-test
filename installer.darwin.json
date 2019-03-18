@@ -1,0 +1,5 @@
+{
+    "source": "https://github.com/kisbalazs90/git-state/archive/master.zip",
+    "action": "unzip",
+    "destination": "OS_BASED_DESTINITION"
+}
